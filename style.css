@@ -1,0 +1,52 @@
+body{
+    background-color: #303030;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+.sun{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #fcd25b;
+    overflow: hidden;
+    animation: sunshine 10s infinite 1.5s;
+    
+}
+.shadow{
+    height: 178px;
+    width: 178px;
+    border-radius: 50%;
+    top: -5px;
+    left: 0px;
+    animation: moveShadow 10s infinite 1.5s;
+}
+@keyframes moveShadow{
+    0%{
+        transform: translateX(150px);
+        background-color: white;
+    }
+    50%{
+        transform: translateX(-10px);
+        background-color: black;
+    }
+    100%{
+        transform: translateX(-178px);
+        background-color: white;
+    }
+}
+@keyframes sunshine{
+    0%{
+        box-shadow: 0px -1px 15px 16px #fcd25b;
+    }
+    50%{
+        box-shadow: 0px -1px 15px 16px transparent;
+    }
+    100%{
+        box-shadow: 0px -1px 15px 16px #fcd25b;
+    }
+}
